@@ -3,9 +3,9 @@ const loggger = (params) => console.log(...params);
 // var global
 // let loacal script
 // const local script
-let name = "Pradeep";
+let name = "karan";
 if (true) {
-  let name = "sanjay";
+  let name = "vengadesh";
   console.log(name);
 }
 console.log("Outer scope", name);
@@ -48,7 +48,7 @@ const arrFunc = (a, b) => a + b;
 console.log("arrow function", arrFunc(10, 15));
 
 const personData = {
-  name: "saravanan",
+  name: "saran",
   batch: "FSD-WE-B3",
   course: "FSD-MERN",
   getPersonData() {
@@ -103,11 +103,11 @@ const baseStudents = {
   session: "WE",
 };
 console.log(baseStudents);
-const newStudent = { ...baseStudents, name: "Pradeep" };
+const newStudent = { ...baseStudents, name: "karan" };
 console.log(newStudent);
 loggger("...........................");
 //destruture
-const nameArr = ["snega", "saravanan", "santhosh", "samvel"];
+const nameArr = ["bitto", "saran", "john", "nalan"];
 const [, name2, name3] = nameArr; //destructure
 console.log(nameArr);
 // console.log("first name", name1);
@@ -115,10 +115,10 @@ console.log("second name", name2);
 console.log("third name", name3);
 
 const profile = {
-  name: "sanjay",
+  name: "vengadesh",
   company: "guvi",
   location: "chennai",
-  designation: "Mentor",
+  designation: "student",
   batches: ["FSD-WE", "FSD-WD"],
 };
 
@@ -137,17 +137,17 @@ getcompanyName(profile);
 
 let profileArr = [
   {
-    name: "sanjay",
+    name: "Vengadesh",
     company: "guvi",
     location: "chennai",
-    designation: "Mentor",
+    designation: "student",
     batches: ["FSD-WE", "FSD-WD"],
   },
   {
-    name: "sanjay",
+    name: "Vengadesh",
     company: "guvi",
     location: "chennai",
-    designation: "Mentor",
+    designation: "student",
     batches: ["FSD-WE", "FSD-WD"],
   },
 ];
