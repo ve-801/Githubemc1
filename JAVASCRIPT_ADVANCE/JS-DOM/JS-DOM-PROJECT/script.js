@@ -22,9 +22,11 @@ const scoreContainer = document.getElementById("score-container");
 const scoreElement = document.getElementById("score");
 let currentQuestionIndex = 0;
 let score = 0;
+
 function startQuiz() {
   showQuestions(currentQuestionIndex);
 }
+
 function showQuestions(index) {
   const question = questions[index];
   questionElement.textContent = question.question;
@@ -39,6 +41,7 @@ function showQuestions(index) {
   });
   nextButton.classList.add("hide");
 }
+
 function selectAnswer(selectedIdx, correctAnsIdx) {
   const optionButtons = optionElement.querySelectorAll("button");
   optionButtons.forEach((button, idx) => {
@@ -52,8 +55,10 @@ function selectAnswer(selectedIdx, correctAnsIdx) {
   if (selectedIdx === correctAnsIdx) {
     score++;
   }
+
   nextButton.classList.remove("hide");
 }
+
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
@@ -62,6 +67,7 @@ nextButton.addEventListener("click", () => {
     showScore();
   }
 });
+
 function showScore() {
   questionElement.classList.add("hide");
   optionElement.classList.add("hide");
@@ -69,8 +75,10 @@ function showScore() {
   scoreContainer.classList.remove("hide");
   scoreElement.textContent = `You Scored ${score} out of ${questions.length}`;
 }
+
 function restartQuiz() {
   currentQuestionIndex = 0;
   startQuiz();
 }
+
 startQuiz();
